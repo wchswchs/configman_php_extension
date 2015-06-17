@@ -4,3 +4,8 @@
 #install
     phpize
     sudo make && make install
+    
+#runtime configuration
+
+如果mysql等服务的配置在/home下，则
+        configman.config_path=/home
