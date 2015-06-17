@@ -9,4 +9,4 @@
 
 如果mysql等服务的配置在/home下，则
 
-        configman.config_path=/home
+    configman.config_path=/home
