@@ -1,6 +1,3 @@
-
-/* This file was generated automatically by Zephir do not modify it! */
-
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
