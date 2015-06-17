@@ -3,6 +3,7 @@
 
 #Installation
     phpize
+    ./configure
     sudo make && make install
     
     [configman]
