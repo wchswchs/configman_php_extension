@@ -138,7 +138,7 @@ static PHP_MINFO_FUNCTION(configman)
 	php_info_print_table_row(2, "Author", PHP_CONFIGMAN_AUTHOR);
 	php_info_print_table_row(2, "Version", PHP_CONFIGMAN_VERSION);
 	php_info_print_table_row(2, "Build Date", __DATE__ " " __TIME__ );
-	php_info_print_table_row(2, "Powered by Zephir", "Version " PHP_CONFIGMAN_ZEPVERSION);
+	php_info_print_table_row(2, "Powered by Meilishuo", "Version " PHP_CONFIGMAN_ZEPVERSION);
 	php_info_print_table_end();
 
 	DISPLAY_INI_ENTRIES();
