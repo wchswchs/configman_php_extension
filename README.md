@@ -11,6 +11,6 @@
     
 #Runtime Configuration
 
-如果mysql等服务的配置在/home下，则php.ini
+以mysql为例，如果mysql的db配置在/home/mysql下，则php.ini
 
     configman.config_path=/home
