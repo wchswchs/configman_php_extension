@@ -8,12 +8,10 @@ PHP_METHOD(Configman_BaseServiceConfig, getService);
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_configman_baseserviceconfig___construct, 0, 0, 1)
 	ZEND_ARG_INFO(0, service)
-	ZEND_ARG_INFO(0, type)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_configman_baseserviceconfig_getservice, 0, 0, 1)
 	ZEND_ARG_INFO(0, service)
-	ZEND_ARG_INFO(0, type)
 ZEND_END_ARG_INFO()
 
 ZEPHIR_INIT_FUNCS(configman_baseserviceconfig_method_entry) {

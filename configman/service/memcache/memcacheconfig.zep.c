@@ -13,8 +13,8 @@
 
 #include "kernel/main.h"
 #include "kernel/hash.h"
-#include "kernel/memory.h"
 #include "kernel/string.h"
+#include "kernel/memory.h"
 #include "kernel/array.h"
 #include "kernel/operators.h"
 
@@ -31,7 +31,7 @@ PHP_METHOD(Configman_Service_Memcache_MemcacheConfig, parse) {
 
 	HashTable *_1;
 	HashPosition _0;
-	zval *configure_param = NULL, *rs_config = NULL, *config = NULL, *memcache_config = NULL, *host = NULL, *port = NULL, **_2, _3 = zval_used_for_init, *_4, _5 = zval_used_for_init, *_6, _7 = zval_used_for_init, *_8 = NULL;
+	zval *configure_param = NULL, *rs_config = NULL, *config = NULL, *memcache_config = NULL, *host = NULL, *port = NULL, **_2, *_3, *_4, *_5 = NULL;
 	zval *configure = NULL;
 
 	ZEPHIR_MM_GROW();
@@ -48,28 +48,22 @@ PHP_METHOD(Configman_Service_Memcache_MemcacheConfig, parse) {
 	  ; zephir_hash_move_forward_ex(_1, &_0)
 	) {
 		ZEPHIR_GET_HVALUE(config, _2);
-		ZEPHIR_SINIT_NVAR(_3);
-		ZVAL_LONG(&_3, ' ');
 		ZEPHIR_INIT_NVAR(memcache_config);
-		zephir_fast_explode(memcache_config, &_3, config, LONG_MAX TSRMLS_CC);
-		zephir_array_fetch_long(&_4, memcache_config, 0, PH_NOISY | PH_READONLY, "configman/service/memcache/MemcacheConfig.zep", 13 TSRMLS_CC);
-		ZEPHIR_SINIT_NVAR(_5);
-		ZVAL_LONG(&_5, '=');
+		zephir_fast_explode_str(memcache_config, SL(" "), config, LONG_MAX TSRMLS_CC);
+		zephir_array_fetch_long(&_3, memcache_config, 0, PH_NOISY | PH_READONLY, "configman/service/memcache/MemcacheConfig.zep", 13 TSRMLS_CC);
 		ZEPHIR_INIT_NVAR(host);
-		zephir_fast_explode(host, &_5, _4, LONG_MAX TSRMLS_CC);
-		zephir_array_fetch_long(&_6, memcache_config, 1, PH_NOISY | PH_READONLY, "configman/service/memcache/MemcacheConfig.zep", 14 TSRMLS_CC);
-		ZEPHIR_SINIT_NVAR(_7);
-		ZVAL_LONG(&_7, '=');
+		zephir_fast_explode_str(host, SL("="), _3, LONG_MAX TSRMLS_CC);
+		zephir_array_fetch_long(&_4, memcache_config, 1, PH_NOISY | PH_READONLY, "configman/service/memcache/MemcacheConfig.zep", 14 TSRMLS_CC);
 		ZEPHIR_INIT_NVAR(port);
-		zephir_fast_explode(port, &_7, _6, LONG_MAX TSRMLS_CC);
+		zephir_fast_explode_str(port, SL("="), _4, LONG_MAX TSRMLS_CC);
 		ZEPHIR_INIT_NVAR(rs_config);
 		zephir_create_array(rs_config, 2, 0 TSRMLS_CC);
-		ZEPHIR_OBS_NVAR(_8);
-		zephir_array_fetch_long(&_8, host, 1, PH_NOISY, "configman/service/memcache/MemcacheConfig.zep", 16 TSRMLS_CC);
-		zephir_array_fast_append(rs_config, _8);
-		ZEPHIR_OBS_NVAR(_8);
-		zephir_array_fetch_long(&_8, port, 1, PH_NOISY, "configman/service/memcache/MemcacheConfig.zep", 16 TSRMLS_CC);
-		zephir_array_fast_append(rs_config, _8);
+		ZEPHIR_OBS_NVAR(_5);
+		zephir_array_fetch_long(&_5, host, 1, PH_NOISY, "configman/service/memcache/MemcacheConfig.zep", 16 TSRMLS_CC);
+		zephir_array_fast_append(rs_config, _5);
+		ZEPHIR_OBS_NVAR(_5);
+		zephir_array_fetch_long(&_5, port, 1, PH_NOISY, "configman/service/memcache/MemcacheConfig.zep", 16 TSRMLS_CC);
+		zephir_array_fast_append(rs_config, _5);
 	}
 	RETURN_CCTOR(rs_config);
 

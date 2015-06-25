@@ -37,7 +37,7 @@ zend_class_entry *configman_service_redis_redisconfig_ce;
 ZEND_DECLARE_MODULE_GLOBALS(configman)
 
 PHP_INI_BEGIN()
-    PHP_INI_ENTRY("configman.config_path", "/test", PHP_INI_ALL, NULL)	
+    PHP_INI_ENTRY("configman.config_path", "/test", PHP_INI_ALL, NULL)
 PHP_INI_END()
 
 static PHP_MINIT_FUNCTION(configman)
