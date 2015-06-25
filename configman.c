@@ -132,10 +132,6 @@ static PHP_RSHUTDOWN_FUNCTION(configman)
 
 static PHP_MINFO_FUNCTION(configman)
 {
-	//php_info_print_box_start(0);
-	//php_printf("%s", PHP_CONFIGMAN_DESCRIPTION);
-	//php_info_print_box_end();
-
 	php_info_print_table_start();
 	php_info_print_table_header(2, PHP_CONFIGMAN_NAME, "enabled");
 	php_info_print_table_row(2, "Author", PHP_CONFIGMAN_AUTHOR);
