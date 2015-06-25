@@ -1,3 +1,6 @@
+
+/* This file was generated automatically by Zephir do not modify it! */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -34,7 +37,7 @@ zend_class_entry *configman_service_redis_redisconfig_ce;
 ZEND_DECLARE_MODULE_GLOBALS(configman)
 
 PHP_INI_BEGIN()
-    PHP_INI_ENTRY("configman.config_path", "/test", PHP_INI_ALL, NULL)
+    PHP_INI_ENTRY("configman.config_path", "/test", PHP_INI_ALL, NULL)	
 PHP_INI_END()
 
 static PHP_MINIT_FUNCTION(configman)
@@ -129,9 +132,9 @@ static PHP_RSHUTDOWN_FUNCTION(configman)
 
 static PHP_MINFO_FUNCTION(configman)
 {
-	php_info_print_box_start(0);
-	php_printf("%s", PHP_CONFIGMAN_DESCRIPTION);
-	php_info_print_box_end();
+	//php_info_print_box_start(0);
+	//php_printf("%s", PHP_CONFIGMAN_DESCRIPTION);
+	//php_info_print_box_end();
 
 	php_info_print_table_start();
 	php_info_print_table_header(2, PHP_CONFIGMAN_NAME, "enabled");

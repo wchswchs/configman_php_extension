@@ -97,7 +97,7 @@ PHP_METHOD(Configman_Service_ServiceConfig, add) {
 	ZEPHIR_CONCAT_VS(_3, _5, "\r\n");
 	ZEPHIR_SINIT_VAR(_7);
 	ZVAL_LONG(&_7, 8);
-	ZEPHIR_CALL_FUNCTION(NULL, "file_put_contents", NULL, 2, _4, _3, &_7);
+	ZEPHIR_CALL_FUNCTION(NULL, "file_put_contents", NULL, 3, _4, _3, &_7);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
 
@@ -111,7 +111,7 @@ PHP_METHOD(Configman_Service_ServiceConfig, read) {
 	ZEPHIR_MM_GROW();
 
 	_0 = zephir_fetch_nproperty_this(this_ptr, SL("file"), PH_NOISY_CC);
-	ZEPHIR_CALL_FUNCTION(&configure, "file", NULL, 3, _0);
+	ZEPHIR_CALL_FUNCTION(&configure, "file", NULL, 4, _0);
 	zephir_check_call_status();
 	ZEPHIR_CALL_METHOD(&config, this_ptr, "parse", NULL, 0, configure);
 	zephir_check_call_status();

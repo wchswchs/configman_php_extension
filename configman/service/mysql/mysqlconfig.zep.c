@@ -64,7 +64,7 @@ PHP_METHOD(Configman_Service_Mysql_MysqlConfig, add) {
 	ZEPHIR_CONCAT_VS(_3, _5, "\r\n");
 	ZEPHIR_SINIT_VAR(_6);
 	ZVAL_LONG(&_6, 8);
-	ZEPHIR_CALL_FUNCTION(NULL, "file_put_contents", NULL, 2, _4, _3, &_6);
+	ZEPHIR_CALL_FUNCTION(NULL, "file_put_contents", NULL, 3, _4, _3, &_6);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
 
